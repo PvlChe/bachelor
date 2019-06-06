@@ -6,11 +6,25 @@
         </mat-form-field>
         <button mat-raised-button color="accent">Search</button>
       </div>
+
+      <mat-button-toggle-group multiple="true" #group="matButtonToggleGroup">
+          <mat-button-toggle value="shop" aria-label="Text align left">
+            Shop
+          </mat-button-toggle>
+          <mat-button-toggle value="service" aria-label="Text align center">
+            Service
+          </mat-button-toggle>
+          <mat-button-toggle value="rent" aria-label="Text align right">
+            Rent
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+        
     <app-card *ngFor="let service of getServices()" [service]="service"></app-card>
 
   </div>
   <div class="services-map">
-     <iframe src="https://maps.google.com/maps?width=100%&amp;height=NaN&amp;hl=en&amp;q=berlin+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Draw map route</a></iframe>
+
+        <iframe src="https://maps.google.com/maps?width=100%&amp;height=NaN&amp;hl=en&amp;q=berlin+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Draw map route</a></iframe>
+
   </div>
 </div>
-

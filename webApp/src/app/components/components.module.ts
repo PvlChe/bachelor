@@ -4,11 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 
-
+  
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventsComponent } from './events/events.component';
-import { RentsComponent } from './rents/rents.component';
 import { ServicesComponent } from './services/services.component';
 import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component';
@@ -20,6 +19,7 @@ import {
   MatToolbarModule,
   MatIconModule,
   MatButtonModule,
+  MatButtonToggleModule,
   MatFormFieldModule,
   MatInputModule
 } from '@angular/material';
@@ -40,10 +40,6 @@ const appRoutes: Routes = [
     component: ServicesComponent 
   },
   {
-    path: 'rents', 
-    component: RentsComponent 
-  },
-  {
     path: 'blog', 
     component: BlogComponent 
   },
@@ -58,7 +54,6 @@ const appRoutes: Routes = [
     HeaderComponent, 
     FooterComponent, 
     EventsComponent, 
-    RentsComponent, 
     ServicesComponent, 
     BlogComponent, 
     LoginComponent, 
@@ -73,6 +68,7 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatButtonToggleModule,
     MatFormFieldModule,
     MatInputModule
   ],
@@ -80,7 +76,6 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent, 
     EventsComponent, 
-    RentsComponent, 
     ServicesComponent, 
     BlogComponent, 
     LoginComponent, 

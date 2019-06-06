@@ -18,10 +18,14 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.title = this.service.title;
-    this.city = this.service.city;
-    this.description = this.service.description;
-    this.logoUrl = this.service.logoUrl;
+
+    if(this.service) {
+      this.title = this.service.title;
+      this.city = this.service.city;
+      this.description = this.service.description;
+      this.logoUrl = this.service.logoUrl;
+    }
+
   }
 
 }

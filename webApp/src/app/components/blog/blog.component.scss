@@ -1,0 +1,29 @@
+.wrapper {
+    width: 1200px; 
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.title {
+    margin: 0;
+}
+
+.search-container {
+    margin: 4rem 0;
+    width: 100%;
+    display: flex;
+    & mat-form-field {
+        flex: auto;
+        margin: 0 2rem;
+        position: relative;
+        align-self: flex-end;
+        
+    }
+    & button {
+        height: 2.5rem;
+        align-self: flex-end;
+        margin: 1.2rem;
+    }
+}
