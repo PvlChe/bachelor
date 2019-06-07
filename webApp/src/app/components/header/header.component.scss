@@ -1,7 +1,7 @@
 .header {
     position: fixed;
     z-index: 99999;
-    height: 5vh;
+    height: 7vh;
     
 }
 
@@ -26,3 +26,10 @@
 button:hover {
     cursor: pointer;
 }   
+
+.mat-toolbar-row {
+    height: 7vh;
+    & button {
+        font-size: 1.2rem;
+    }
+}
