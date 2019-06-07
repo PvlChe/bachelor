@@ -1,5 +1,7 @@
 import { Component, OnInit, Directive } from '@angular/core';
 import { Service } from 'src/app/models/service.model';
+import { DummyData } from './../../dummyData/dummy.data';
+import { NgOnChangesFeature } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-services',
@@ -9,30 +11,20 @@ import { Service } from 'src/app/models/service.model';
 })
 export class ServicesComponent implements OnInit {
 
-  getServices() {
-    let services = [];
-    for (let i = 0; i < 10; i++) {
-      let service: Service = new Service(
-        'Service Title',
-        'Minsk',
-        `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting. The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.`,
-        'logoUrl'
-      );
-      services.push(service);
-    }
-    return services;
-  }
+  data: DummyData = new DummyData();
+  services: Service[] = this.data.services;
 
+  public onFilterChange(value: []){
+    this.services = this.data.services.filter(service => {
+      return value.every( state => {
+        return service[state];
+      })
+    });
+  }
+  
   constructor() { 
-    
   }
 
   ngOnInit() {
-    
   }
-
 }

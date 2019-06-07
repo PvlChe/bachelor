@@ -8,10 +8,8 @@ import { Service } from 'src/app/models/service.model';
 })
 export class CardComponent implements OnInit {
   @Input() service: Service;
-  title: string;
-  city: string;
-  description: string;
-  logoUrl: string;
+  hideInfo = true;
+ 
 
   constructor() { 
 
@@ -19,12 +17,6 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {
 
-    if(this.service) {
-      this.title = this.service.title;
-      this.city = this.service.city;
-      this.description = this.service.description;
-      this.logoUrl = this.service.logoUrl;
-    }
 
   }
 

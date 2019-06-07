@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Event } from 'src/app/models/event.model';
 
 @Component({
   selector: 'app-event-card',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-card.component.scss']
 })
 export class EventCardComponent implements OnInit {
-  hiddenInfo = true;
+  hideInfo = true;
+  @Input()
+  event: Event;
+
   constructor() { }
 
   ngOnInit() {

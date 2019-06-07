@@ -21,7 +21,8 @@ import {
 @NgModule({
   declarations: [
     CardComponent, 
-    BlogCardComponent, EventCardComponent
+    BlogCardComponent, 
+    EventCardComponent
   ],
   imports: [
     CommonModule,

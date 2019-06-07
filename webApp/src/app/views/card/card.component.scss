@@ -2,13 +2,12 @@
     margin: 2rem;
     padding: 1.5rem;
   }
-  
-.example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-}
 
 mat-card-actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.features > * {
+    margin: 0 0.5rem;
 }

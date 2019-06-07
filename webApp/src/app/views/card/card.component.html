@@ -1,13 +1,27 @@
 <mat-card class="example-card">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{ title }}</mat-card-title>
-      <mat-card-subtitle>{{ city }}</mat-card-subtitle>
+      <div mat-card-avatar [ngStyle]="{'background-image': 'url(' + service.logoUrl + ')', 'background-size': 'cover'  }"></div>
+      <mat-card-title>{{ service.title }}</mat-card-title>
+      <mat-card-subtitle>{{ service.city }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p>{{ description }}</p>
+      <p>{{ service.description }}</p>
+      <br>
+      <div [hidden] = "hideInfo">
+        <p><b>Name: </b>{{ service.name }}</p>
+        <p><b>Tel:</b>  {{ service.phone }}</p>
+        <p><b>Adress:</b>  {{ service.adress }}</p>
+        <p><b>Ofnz:</b>  {{ service.time }}</p>
+
+        
+      </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="accent">Details</button>
+      <div class="features">
+        <mat-icon color="primary" *ngIf="service.isShop">shopping_cart</mat-icon>
+        <mat-icon color="primary" *ngIf="service.isRent">directions_bike</mat-icon>
+        <mat-icon color="primary" *ngIf="service.isService">build</mat-icon>
+      </div>
+      <button mat-stroked-button color="accent" (click) = "hideInfo = !hideInfo"><mat-icon color="primary">{{ hideInfo === true ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</mat-icon></button>
     </mat-card-actions>
   </mat-card>
