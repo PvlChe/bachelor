@@ -1,0 +1,48 @@
+.event-card {
+    padding: 0;
+    margin: 1rem;
+    
+}
+
+.event-card > * {
+    transition: 2s;
+}
+
+mat-toolbar {
+    padding: 1rem;
+}
+
+mat-toolbar-row {
+    margin: 0;
+    padding: 0;
+    padding-top: 1rem;
+}
+
+mat-toolbar-row {
+    display: flex;
+    
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.title {
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+mat-card-content {
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.card-hidden-info {
+    transition: 2s;
+
+}
+
+[mat-icon-button] {
+    
+    float: right;
+}

@@ -1,0 +1,39 @@
+<mat-card class="event-card">
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <mat-card-header>
+        <mat-card-title>Bike Marathon in Berlin Mitte Bike Marathon in </mat-card-title>
+        <mat-card-subtitle>Berlin</mat-card-subtitle>
+      </mat-card-header>  
+      <span class="spacer"></span>
+      <span class="title mat-display-2">24. July</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-card-content>
+      <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+       
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+          <div class="card-hidden-info" [hidden]="hiddenInfo">
+              <br>
+            <span>Tel: +49 176 123 32 922</span><br>
+            <span>Name: Dmitry</span><br>
+            <span>Adresse: Berlin, Lynarstraße 21</span>
+          </div>
+
+              <mat-card-actions>
+                  <button mat-icon-button (click) = "hiddenInfo = !hiddenInfo"><mat-icon id="btn">keyboard_arrow_down</mat-icon></button>
+                </mat-card-actions>
+
+
+  </mat-card-content>
+
+</mat-card>

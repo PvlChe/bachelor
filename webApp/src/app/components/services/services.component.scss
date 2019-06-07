@@ -4,11 +4,11 @@
 
 .services-list {
     min-width: 400px;
-    flex: 1;
+    flex: 2;
 }
 
 .services-map {
-    flex: 2;
+    flex: 3;
     padding: 2rem;
     & > iframe {
         width: 100%;
