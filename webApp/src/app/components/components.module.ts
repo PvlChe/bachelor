@@ -17,13 +17,16 @@ import { HomeComponent } from './home/home.component';
 
 //Material imports
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 import { 
   MatToolbarModule,
   MatIconModule,
   MatButtonModule,
   MatButtonToggleModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatTabsModule,
+  MatStepperModule,
 } from '@angular/material';
 import { ViewsModule } from '../views/views.module';
 
@@ -72,7 +75,11 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatButtonToggleModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTabsModule,
+    MatStepperModule,
+    ReactiveFormsModule
+    
   ],
   exports: [
     HeaderComponent,
