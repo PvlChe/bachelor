@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Blog } from 'src/app/models/blog.model.';
 
 @Component({
   selector: 'app-blog-card',
@@ -6,13 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./blog-card.component.scss']
 })
 export class BlogCardComponent implements OnInit {
-  @Input() size: string;
+  @Input() index: number;
+  @Input() blog: Blog;
+  size: string;
   
   constructor() { }
 
   ngOnInit() {
     if(!this.size) {
       this.size = 'big-card'
+    }
+    if(this.index % 3 != 0){
+      this.size = 'medium-card';
+    } else {
+      this.size = 'big-card';
     }
   }
 

@@ -34,6 +34,8 @@ export class ServicesComponent implements OnInit {
       let check = false;
       
       if( service.city.toLowerCase().includes(searchValue.toLowerCase()) ||
+          searchValue.toLowerCase().includes(service.city.toLowerCase()) ||
+          searchValue.toLowerCase().includes(service.title.toLowerCase()) ||
           service.title.toLowerCase().includes(searchValue.toLowerCase()) ||
           service.description.toLowerCase().includes(searchValue.toLowerCase()) ||
           service.adress.toLowerCase().includes(searchValue.toLowerCase())

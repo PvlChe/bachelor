@@ -1,6 +1,7 @@
 export class DummyData {
     public events;
     public services;
+    public blogs;
 
 
     constructor() {
@@ -105,6 +106,27 @@ export class DummyData {
                 isShop:  false, 
                 isRent:  true, 
                 isService:  false
+            }
+        ],
+
+        this.blogs = [
+            {
+                title: 'First Topic Title',
+                date: Date.now(),
+                description: 'First topic Descripton is not too long and not too short. First topic Descripton is not too long and not too short. First topic Descripton is not too long and not too short. First topic Descripton is not too long and not too short.',
+                imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+            },
+            {
+                title: 'Second Topic Title Long Edition',
+                date: Date.now(),
+                description: 'First topic Descripton is not too long and not too short. First topic Descripton is not too long and not too short. First topic Descripton is not too long and not too short. First topic Descripton is not too long and not too short.',
+                imgUrl: 'https://material.angular.io/assets/img/examples/shiba1.jpg'
+            },
+            {
+                title: 'Third Topic Title Long',
+                date: Date.now(),
+                description: 'First topic Descripton is not too long and not too short. First topic Descripton is not too long and not too short. First topic Descripton is not too long and not too short. First topic Descripton is not too long and not too short.',
+                imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
             }
         ]
     }

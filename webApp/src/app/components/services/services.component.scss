@@ -3,7 +3,7 @@
 }
 
 .services-list {
-    min-width: 400px;
+    min-width: 500px;
     flex: 1;
 }
 
@@ -39,4 +39,41 @@ agm-map {
 
 mat-button-toggle-group {
     margin-left: 2rem;
+}
+
+@media (max-width: 900px) {
+    .services-container {
+        flex-direction: column-reverse;
+        & button {
+            margin-right: 0;
+        }
+    }
+
+    .services-map {
+    flex: 1;
+    min-height: 300px;
+    height: 50vh;
+    padding: 2vh;
+    & > .map {   
+        width: 100%;
+        min-height: 300px;   
+        height: 100%;
+        position: sticky;
+        top: 9vh;
+    }
+}
+
+
+    .services-list {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 370px) {
+    .search-container {
+        margin: 1rem;
+        & mat-form-field {
+            margin-right: 1rem;
+        }
+    }
 }
