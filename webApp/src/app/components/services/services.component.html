@@ -2,12 +2,12 @@
   <div class="services-list">
       <div class="search-container">
         <mat-form-field color="primary">
-          <input matInput  placeholder="Search">
+          <input matInput #searchInput  placeholder="Search" (keyup) = "filterData(group.value, searchInput.value)">
         </mat-form-field>
-        <button mat-raised-button color="primary">Search</button>
+        <button mat-raised-button color="primary" (click) = "filterData(group.value, searchInput.value)">Search</button>
       </div>
 
-      <mat-button-toggle-group multiple="true" #group="matButtonToggleGroup" (change)="onFilterChange(group.value)">
+      <mat-button-toggle-group multiple="true" #group="matButtonToggleGroup" (change)="filterData(group.value, searchInput.value)">
           <mat-button-toggle value="isShop" Enable aria-label="Text align left">
             Shop
           </mat-button-toggle>
@@ -24,8 +24,29 @@
 
   </div>
   <div class="services-map">
-
-        <iframe src="https://maps.google.com/maps?width=100%&amp;height=NaN&amp;hl=en&amp;q=berlin+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Draw map route</a></iframe>
-
+    <div class="map">
+       <!--  <iframe src="https://maps.google.com/maps?width=100%&amp;height=NaN&amp;hl=en&amp;q=berlin+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Draw map route</a></iframe> -->
+       <agm-map [latitude]="53.9" [zoom]="12" [longitude]="27.56667">
+          <agm-marker  [latitude]="53.9" [longitude]="27.56667"></agm-marker>
+        </agm-map>
+      </div>
   </div>
+  
+  <script>
+    console.log("map");
+    function initMap() {
+      console.log("map initialized"); 
+      const element = document.getElementById('map');
+      const options = {
+        zoom: 5, 
+        center: {
+          lat: 53.9,
+          lng: 27.56667
+        }
+      };
+      const myMap = new google.maps.Map(element, options);
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-9oXOzxYgIYtSo3W8vqCScG7ng4Widjo&callback=initMap"
+  type="text/javascript"></script>
 </div>

@@ -44,7 +44,7 @@ export class DummyData {
             {
                 title: 'Cube Store', 
                 city: 'Minsk', 
-                description: 'The best Bike Shop in the World. Everything what you need aroun your bike you can find here! The best Bike Shop in the World. Everything what you need aroun your bike you can find here! The best Bike Shop in the World. Everything what you need aroun your bike you can find here! The best Bike Shop in the World. Everything what you need aroun your bike you can find here! The best Bike Shop in the World. Everything what you need aroun your bike you can find here!', 
+                description: 'The best Bike Shop in the World. Everything what you need aroun your bike you can find here! The best Bike Shop in the World. Everything what you need aroun your bike you can find here! The best Bike Shop in the World.', 
                 logoUrl: 'https://material.angular.io/assets/img/examples/shiba1.jpg', 
                 phone: '+49-123-22-2312-2', 
                 name: 'Vitaly', 

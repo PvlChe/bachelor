@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -68,6 +69,9 @@ const appRoutes: Routes = [
     CommonModule,
     RouterModule.forRoot(appRoutes),
     ViewsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD-9oXOzxYgIYtSo3W8vqCScG7ng4Widjo'
+    }),
     //Material
     BrowserAnimationsModule,
     MatToolbarModule,
