@@ -1,26 +1,12 @@
 .event-card {
     padding: 0;
     margin: 1rem;
-    
 }
 
-.event-card > * {
-    transition: 2s;
-}
-
-mat-toolbar {
-    padding: 1rem;
-}
-
-mat-toolbar-row {
-    margin: 0;
-    padding: 0;
-    padding-top: 1rem;
-}
-
-mat-toolbar-row {
+.mat-card-header {
     display: flex;
-    
+    background-color: #cfd8dc;
+    padding: 1rem;
 }
 
 .spacer {
@@ -32,17 +18,17 @@ mat-toolbar-row {
     margin-bottom: 1rem;
 }
 
-mat-card-content {
+.mat-card-content {
     padding: 2rem;
     overflow: hidden;
 }
 
-.card-hidden-info {
-    transition: 2s;
-
+[mat-icon-button] {
+    float: right;
 }
 
-[mat-icon-button] {
-    
-    float: right;
+@media (max-width: 700px) {
+    .mat-card-header {
+        flex-direction: column-reverse;
+    }
 }

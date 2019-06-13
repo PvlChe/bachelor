@@ -28,6 +28,7 @@ import {
   MatInputModule,
   MatTabsModule,
   MatStepperModule,
+  MatSidenavModule,
 } from '@angular/material';
 import { ViewsModule } from '../views/views.module';
 
@@ -82,7 +83,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatTabsModule,
     MatStepperModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule,
     
   ],
   exports: [
