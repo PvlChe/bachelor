@@ -1,23 +1,23 @@
 .wrapper {
-    width: 960px; 
+    max-width: 960px; 
     margin: auto;
+    padding: 4rem 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 .title {
     margin: 0;
 }
 
 .search-container {
-    margin: 4rem 0;
-    width: 100%;
+    flex: 1;
     display: flex;
-    & mat-form-field {
+    height: 7rem;
+    margin-bottom: 2rem;
+    & .mat-form-field {
         flex: auto;
-        margin: 0 2rem;
-        position: relative;
+        margin: 0 1rem;
         align-self: flex-end;
         
     }
@@ -25,5 +25,19 @@
         height: 2.5rem;
         align-self: flex-end;
         margin: 1.2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .title {
+        font-size: 6rem;
+    }
+
+    .search-container {
+
+        & button {
+
+            margin: 1rem 0;
+        }
     }
 }

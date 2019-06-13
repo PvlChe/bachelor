@@ -1,14 +1,10 @@
 <div class="wrapper">
-    <span class="title mat-display-4">Events.</span>
+  <span class="title mat-display-4">Events.</span>
   <div class="search-container">
-    
     <mat-form-field color="primary">
-        <input matInput  placeholder="Search">
+        <input matInput #searchInput  placeholder="Search" (keyup) = "onSearchClick(searchInput.value)">
     </mat-form-field>
-    <button mat-raised-button color="primary">Search</button>
+    <button mat-raised-button color="primary" (click) = "onSearchClick(searchInput.value)">Search</button>
   </div>
-  <app-event-card></app-event-card>
-  <app-event-card></app-event-card>
-  <app-event-card></app-event-card>
-  <app-event-card></app-event-card>
+  <app-event-card *ngFor="let event of events" [event]="event"></app-event-card>
 </div>

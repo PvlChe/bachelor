@@ -19,7 +19,7 @@ export class DummyData {
                 time: '11:00'
             }, 
             {
-                title: 'Fahrrad Kampf in der Mitte',
+                title: 'Fahrrad Kampf in der Mitte eto budet gryaznaya zaruba.',
                 city: 'Hamburg',
                 description: 'Unvergesslicher FahrradKampf in Hamburg 2019, nicht verpassen. Unvergesslicher FahrradKampf in Hamburg 2019, nicht verpassen. Unvergesslicher FahrradKampf in Hamburg 2019, nicht verpassen. Unvergesslicher FahrradKampf in Hamburg 2019, nicht verpassen. Unvergesslicher FahrradKampf in Hamburg 2019, nicht verpassen',
                 date: Date.now(),
@@ -32,7 +32,7 @@ export class DummyData {
                 title: 'Fahrradfußball',
                 city: 'Berlin',
                 description: 'First bike Marathon in berlin seit 2001. First bike Marathon in berlin seit 2001. First bike Marathon in berlin seit 2001. First bike Marathon in berlin seit 2001. First bike Marathon in berlin seit 2001.',
-                date: new Date(12312312312312312),
+                date: new Date(2231231312312),
                 owner: 'Sahn ko',
                 phone: '+49-176-305-91-244',
                 adress: 'Patsdamer Straße 43, 10895 Berlin',

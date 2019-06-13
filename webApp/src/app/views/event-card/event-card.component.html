@@ -1,31 +1,20 @@
 <mat-card class="event-card">
 
       <mat-card-header>
-        <mat-card-title>Bike Marathon in Berlin Mitte Bike Marathon in </mat-card-title>
-        <mat-card-subtitle>Berlin</mat-card-subtitle>
+        <mat-card-title>{{ event.title }}</mat-card-title>
+        <mat-card-subtitle>{{ event.city }}</mat-card-subtitle>
         <span class="spacer"></span>
-        <span class="title mat-display-1">24. July</span>
+        <span class="title mat-display-1">{{ event.date | date : 'dd MMM' }}</span>
       </mat-card-header>  
 
 
   <mat-card-content>
-      <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-       
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
+      <p>{{ event.description }}</p>
           <div class="card-hidden-info" [hidden]="hideInfo">
               <br>
-            <span>Tel: +49 176 123 32 922</span><br>
-            <span>Name: Dmitry</span><br>
-            <span>Adresse: Berlin, Lynarstraße 21</span>
+            <div><b>Tel: </b> {{ event.phone }}</div><br>
+            <div><b>Name: </b> {{ event.owner }}</div><br>
+            <div><b>Adresse: </b> {{ event.adress }}</div>
           </div>
 
               <mat-card-actions>

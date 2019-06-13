@@ -1,7 +1,7 @@
 export class Event {
     public title: string;
     public city: string;
-    public date: Date;
+    public date: string;
     public description: string;
     public owner: string;
     public phone: string;
@@ -10,7 +10,7 @@ export class Event {
     public time: string;
     
 
-    constructor(title: string, city: string, description: string, date: Date, owner: string, phone: string, adress: string, time: string) {
+    constructor(title: string, city: string, description: string, date: string, owner: string, phone: string, adress: string, time: string) {
         this.title = title;
         this.city = city;
         this.description = description;

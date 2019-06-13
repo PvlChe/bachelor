@@ -1,11 +1,10 @@
 <div class="wrapper">
-
+    <span class="title mat-display-4">News.</span>
     <div class="search-container">
-        <span class="title mat-display-4">News.</span>
-            <mat-form-field color="primary">
-                <input matInput  placeholder="Search">
-            </mat-form-field>
-            <button mat-raised-button color="primary">Search</button>
+        <mat-form-field color="primary">
+            <input matInput #searchInput  placeholder="Search" (keyup) = "onSearchClick(searchInput.value)">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click) = "onSearchClick(searchInput.value)">Search</button>
     </div>
     <app-blog-card *ngFor="let blog of blogs; let i = index" [index]="i" [blog]="blog"></app-blog-card>
 </div>

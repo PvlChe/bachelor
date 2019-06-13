@@ -21,6 +21,11 @@
 .mat-card-content {
     padding: 2rem;
     overflow: hidden;
+
+}
+
+.card-hidden-info > span {
+    margin-top: 1rem;
 }
 
 [mat-icon-button] {
@@ -30,5 +35,8 @@
 @media (max-width: 700px) {
     .mat-card-header {
         flex-direction: column-reverse;
+        text-align: center;
     }
+
+
 }
