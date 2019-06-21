@@ -19,16 +19,15 @@
 }
 
 .mat-card-content {
-    padding: 2rem;
+    padding: 2rem 2rem 1rem;
     overflow: hidden;
-
 }
 
 .card-hidden-info > span {
     margin-top: 1rem;
 }
 
-[mat-icon-button] {
+[mat-stroked-button] {
     float: right;
 }
 

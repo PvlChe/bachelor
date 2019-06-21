@@ -13,7 +13,7 @@ import { ServicesComponent } from './services/services.component';
 import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-
+import { AdminComponent } from './admin/admin/admin.component';
 
 
 //Material imports
@@ -31,6 +31,7 @@ import {
   MatSidenavModule,
 } from '@angular/material';
 import { ViewsModule } from '../views/views.module';
+
 
 
 const appRoutes: Routes = [
@@ -53,7 +54,11 @@ const appRoutes: Routes = [
   {
     path: 'login', 
     component: LoginComponent 
-  }
+  }, 
+  {
+    path: 'admin', 
+    component: AdminComponent 
+  }, 
 ]
 
 @NgModule({
@@ -64,7 +69,8 @@ const appRoutes: Routes = [
     ServicesComponent, 
     BlogComponent, 
     LoginComponent, 
-    HomeComponent,
+    HomeComponent, 
+    AdminComponent,
   ],
   imports: [
     CommonModule,
@@ -95,6 +101,7 @@ const appRoutes: Routes = [
     BlogComponent, 
     LoginComponent, 
     HomeComponent,
+    AdminComponent
   ]
 })
 export class ComponentsModule { }

@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 83vh;
+}
+.example-container {
+    flex: 1;
+  }
+
+  .mat-button-toggle-group {
+      display: flex;
+      flex-direction: column;
+  }

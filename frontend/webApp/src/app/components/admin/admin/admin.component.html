@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+
+      <mat-button-toggle-group #group="matButtonToggleGroup" name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="event">Event</mat-button-toggle>
+        <mat-button-toggle value="blog">Blog</mat-button-toggle>
+        <mat-button-toggle value="service">Service</mat-button-toggle>
+      </mat-button-toggle-group>
+    </mat-drawer>
+    <mat-drawer-content *ngIf="group.value=='event'">Event</mat-drawer-content>
+    <mat-drawer-content *ngIf="group.value=='blog'">Blog</mat-drawer-content>
+    <mat-drawer-content *ngIf="group.value=='service'">Service</mat-drawer-content>
+  </mat-drawer-container>
+</div>
